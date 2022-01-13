@@ -11,7 +11,7 @@ This project is for an school assingment where I was evaluated on my use of mong
 ## Set up node.js and express
   - Please download node.js
   - Once you are in the same directory as the app, run **npm install** to install the modules
-  - Then run **node ./databaseInit.js** to add items to the database
+  - Then run **node ./database-initalizer.js** to add items to the database
   - Then run **npm start**
   - Then go to http://localhost:3000/ 
 ## How to stop running the applicaiton
