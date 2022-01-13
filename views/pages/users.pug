@@ -1,0 +1,12 @@
+html 
+  head 
+    title Regester 
+  body 
+      include ../partials/regHeader 
+      br
+
+      each user in users
+        if (!user.privacy || user.username == username)
+          a(href="/users/" + user._id) #{user.username}
+          br
+          

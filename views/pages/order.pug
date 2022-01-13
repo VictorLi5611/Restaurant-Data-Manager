@@ -1,0 +1,15 @@
+html 
+  head 
+    title Restarant Order Home Page 
+  body 
+    include ../partials/regHeader 
+    br
+    div#main 
+      h1 #{order.restaurantName} 
+      each item in order.order 
+        p #{item.quantity}x #{item.name}
+      p Subtotal: $#{order.subtotal}
+      p Fee: $#{order.fee}
+      p Tax: $#{order.tax}
+      hr
+      p Total: $#{order.total}

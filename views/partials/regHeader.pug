@@ -1,0 +1,16 @@
+div#header 
+  a(href="/") Home 
+  |
+  a(href="/users") User 
+  |
+  
+  if (!loggedin)
+    a(href="/login") Login 
+    |
+    a(href="/register") Regester 
+    | 
+  if (loggedin)
+    |
+    a(href="/order") order
+    br
+    a(href="/logout") Logout

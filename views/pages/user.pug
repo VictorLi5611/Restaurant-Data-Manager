@@ -1,0 +1,37 @@
+html 
+  head 
+    title Restarant Order Home Page 
+  body 
+    include ../partials/regHeader 
+    br
+    div#main 
+      h1 #{user.username}
+      p #{session.username} 
+      if (!user.privacy)
+        p 
+          b public account 
+          br
+          if (loggedin && own)
+          lable(for="private") private or public?
+          select#private(name = "private")
+            option(value = "true") private 
+            option(value = "false" selected ="selected") public
+          input(type='submit' onclick="submit()")
+      if (user.privacy)
+        p 
+          b private account
+          br
+          if (loggedin && own)
+            lable(for="private") private or public?
+            select#private(name = "private")
+              option(value = "true" selected ="selected") private 
+              option(value = "false") public
+            input(type='submit' onclick="submit()")
+
+      h2 Orders:
+     
+      each order in orders 
+        a(href="/order/" + order) #{order}
+        br
+      
+    script(type = "text/javascript" src='/user.js')
